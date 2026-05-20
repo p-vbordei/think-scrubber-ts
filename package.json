@@ -1,5 +1,5 @@
 {
-  "name": "think-scrubber",
+  "name": "@p-vbordei/think-scrubber",
   "version": "1.0.0",
   "description": "Stateful streaming reasonings scrubber for LLM streams",
   "main": "./dist/index.js",

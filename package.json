@@ -1,0 +1,63 @@
+{
+  "name": "think-scrubber",
+  "version": "1.0.0",
+  "description": "Stateful streaming reasonings scrubber for LLM streams",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "keywords": [
+    "llm",
+    "streaming",
+    "thinking",
+    "reasoning",
+    "scrubber",
+    "ai-agents"
+  ],
+  "author": {
+    "name": "Vlad Bordei",
+    "email": "bordeivlad@gmail.com",
+    "url": "https://github.com/p-vbordei"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p-vbordei/think-scrubber-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/p-vbordei/think-scrubber-ts/issues"
+  },
+  "homepage": "https://github.com/p-vbordei/think-scrubber-ts#readme",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=8"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
